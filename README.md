@@ -1,66 +1,52 @@
-## 📊 Trader Performance vs Market Sentiment
+# 📊 Trader Sentiment Analysis
+
+This project analyzes how market sentiment (Fear vs Greed) influences trader behavior and performance using Hyperliquid trading data.
 
 # 🔹 Objective
 
-This project analyzes how market sentiment (Fear vs Greed) influences trader performance and behavior using Hyperliquid trading data.
+To understand how trader performance and behavior change under different market sentiment conditions and derive actionable trading strategies.
 
-Dataset
-
-Due to GitHub file size limits, the full dataset is not included.
-
-You can download it here:
-- Historical Trader Data: [https://drive.google.com/file/d/1IAfLZwu6rJzyWKgBToqwSmmVYU6VbjVs/view?usp=sharing]
-- Sentiment Freed Data: [https://drive.google.com/file/d/1PgQC0tO8XN-wqkNyghWc_-mnrYv_nhSf/view?usp=sharing]
 
 # 🔹 Methodology
 
-Cleaned and merged sentiment and trading datasets on a daily level
+- Cleaned and preprocessed both datasets
+- Converted timestamps and aligned data on daily level
+- Merged trader data with sentiment data using Date
 
-Created key metrics:
+- Created key metrics:
+  - Closed PnL
+  - Win rate
+  - Trade frequency
+  - Average trade size
+  - Long/Short ratio
 
-PnL (profit/loss)
-
-Win rate
-
-Trade size (risk proxy)
-
-Trade frequency
-
-Long/Short ratio
-
-Performed sentiment-based analysis and trader segmentation
-
-Built a simple predictive model and clustering approach
-
-Developed an interactive Streamlit dashboard
+- Segmented traders:
+  - Frequent vs Infrequent
+  - Winners vs Losers
+  - High vs Low trade size
 
 # 🔹 Key Insights
 
-Higher profitability during Extreme Greed
+1. **Highest profitability occurs during Extreme Greed**
+   - Average PnL peaks during these periods.
 
-Traders achieve the highest average PnL during Extreme Greed periods.
+2. **Risk-taking increases in Greed markets**
+   - Trade size is significantly higher compared to Fear periods.
 
-Behavior changes with sentiment
+3. **Strong short bias during Extreme Greed (~70% SHORT)**
+   - Indicates profit booking or counter-trend strategies.
 
-Traders take larger positions and higher risks during Greed, while being more cautious during Fear.
-
-Strong short bias in Extreme Greed (~70%)
-
-Indicates profit-taking or counter-trend strategies.
-
-Frequent traders perform more consistently
-
-Suggesting experience and activity improve outcomes.
+4. **Frequent traders perform more consistently**
+   - Suggests experience improves stability.
 
 # 🔹 Strategy Recommendations
 
-Risk control during Fear
+- During Fear periods:
+  - Reduce leverage and trade size to minimize losses
 
-Reduce trade size and exposure due to lower profitability and higher uncertainty.
-
-Increase activity during Greed (for experienced traders)
-
-Frequent traders can capitalize on higher momentum and better performance.
+- During Greed periods:
+  - Increase activity but manage risk carefully
+  - Avoid excessive shorting despite market optimism
 
 # 🔹 Bonus Work
 
@@ -74,11 +60,30 @@ Identified trader groups based on activity, trade size, and profitability.
 
 Streamlit Dashboard
 
-Built an interactive dashboard to explore performance and behavior dynamically.
+A Streamlit app is included to interactively explore:
+- PnL distribution
+- Trade frequency
+- Risk behavior
+- Long/Short bias
 
-# 🔹 How to Run
-
-pip install -r task-requirements.txt
+Run using:
 
 streamlit run app/taskapp.py
 
+
+
+# Dataset
+
+Due to GitHub file size limits, the full dataset is not included.
+
+You can download it here:
+- Historical Trader Data: [https://drive.google.com/file/d/1IAfLZwu6rJzyWKgBToqwSmmVYU6VbjVs/view?usp=sharing]
+- Sentiment Freed Data: [https://drive.google.com/file/d/1PgQC0tO8XN-wqkNyghWc_-mnrYv_nhSf/view?usp=sharing]
+
+
+
+
+# 🔷  Requirements
+## Requirements
+
+pip install -r task-requirements.txt
