@@ -78,7 +78,7 @@ Built an interactive dashboard to explore performance and behavior dynamically.
 
 # 🔹 How to Run
 
-pip install -r requirements.txt
+pip install -r task-requirements.txt
 
 streamlit run app/taskapp.py
 
