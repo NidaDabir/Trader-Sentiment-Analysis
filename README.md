@@ -1,9 +1,10 @@
-📊 Trader Performance vs Market Sentiment
+## 📊 Trader Performance vs Market Sentiment
+
 🔹 Objective
 
 This project analyzes how market sentiment (Fear vs Greed) influences trader performance and behavior using Hyperliquid trading data.
 
-## Dataset
+Dataset
 
 Due to GitHub file size limits, the full dataset is not included.
 
